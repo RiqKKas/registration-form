@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #091924;
+  --secondary-color: #0d2636;
+  --tertiary-color: #048fcf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  border: none;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: var(--tertiary-color);
+}
+
+input, label {
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  border-color: var(--tertiary-color);
+}
+
+input[type="submit"] {
+  background-color: var(--tertiary-color);
+  font-weight: bold;
+  color: #FFf;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  margin: 0;
+}
+
+#agreement, label[for="agreement"] {
+  margin-right: 5px;
+  display: inline-block;
+  width: auto;
+}
+
+.container {
+  width: 500px;
+  height: 530px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.full-box {
+  flex: 1 1 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.half-box {
+  flex: 1 1 45%;
+  position: relative;
+  margin-right: 2.5%;
+  margin-bottom: 40px;
+}
+
+.error-validation {
+  position: absolute;
+  color: #FF1A1A;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.template {
+  display: none;
+}
