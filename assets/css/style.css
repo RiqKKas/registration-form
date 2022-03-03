@@ -1,6 +1,6 @@
 :root {
   --primary-color: #091924;
-  --secondary-color: #0d2636;
+  --secondary-color: #0f2c3f;
   --tertiary-color: #048fcf;
 }
 
@@ -13,73 +13,49 @@
 }
 
 body {
-  height: 100vh;
-  background-color: var(--secondary-color);
+  min-height: 100vh;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  width: 600px;
+  min-height: 430px;
+  max-height: 2000px;
+  padding: 18px;
+  margin: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
 }
 
 a {
   color: var(--tertiary-color);
 }
 
-input, label {
-  display: block;
-  width: 100%;
-  outline: none;
-}
-
-label {
-  font-weight: bold;
-  font-size: .8rem;
-}
-
-input {
-  border-bottom: 2px solid #323232;
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-}
-
-input:focus {
-  border-color: var(--tertiary-color);
-}
-
-input[type="submit"] {
-  background-color: var(--tertiary-color);
-  font-weight: bold;
-  color: #FFf;
-  border: none;
-  border-radius: 20px;
-  height: 40px;
-  margin: 0;
-}
-
-#agreement, label[for="agreement"] {
-  margin-right: 5px;
-  display: inline-block;
-  width: auto;
-}
-
-.container {
-  width: 500px;
-  height: 530px;
-  background-color: #FFF;
-  border-radius: 10px;
-  padding: 25px;
-}
-
-.container h1 {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-}
-
 form {
+  height: 100%;
+}
+
+fieldset {
+  padding: 20px;
+  border: 3px solid dodgerblue;
+  font-weight: bold;
+  border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+
+legend {
+  border: 1px solid dodgerblue;
+  padding: 10px;
+  color: #FFF;
+  text-align: center;
+  background-color: dodgerblue;
+  border-radius: 10px;
 }
 
 .full-box {
@@ -88,12 +64,73 @@ form {
   margin-bottom: 40px;
 }
 
+.box-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
 .half-box {
   flex: 1 1 45%;
   position: relative;
-  margin-right: 2.5%;
   margin-bottom: 40px;
 }
+
+.gap {
+  margin-right: 2.5%;
+}
+
+input, label {
+  display: block;
+  width: 100%;
+  outline: none;
+  font-size: .95rem;
+}
+
+label {
+  font-weight: bold;
+  color: #FFF;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+input {
+  border-bottom: 2px solid #000;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  color: black;
+}
+
+input:focus {
+  border-color: var(--tertiary-color);
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
+
+input[type="submit"] {
+  background-color: var(--tertiary-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  color: #FFF;
+  margin: 0;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #0577ac;
+}
+
+#agreement, label[for="agreement"] {
+  margin-right: 5px;
+  display: inline-block;
+  width: auto;
+}
+
 
 .error-validation {
   position: absolute;
@@ -104,4 +141,19 @@ form {
 
 .template {
   display: none;
+}
+
+@media (max-width: 440px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .half-box, .full-box {
+    flex: 1 1 100%;
+    margin-bottom: 60px;
+  }
+
+  .box-button {
+    margin-bottom: 0;
+  }
 }

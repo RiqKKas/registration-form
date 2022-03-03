@@ -89,8 +89,16 @@ class Validator {
         }
 
         const cpf = input.value.replace(/\D+/g, '');
-        if (cpf.length !== 11) return false;
-        if (isSequence(cpf)) return false;
+        const errorMessage = 'CPF inválido.';
+        
+        if (cpf.length !== 11) {
+            this.printMessage(input, errorMessage);
+            return false;
+        }
+        if (isSequence(cpf)) {
+            this.printMessage(input, errorMessage);
+            return false;
+        }
 
         const partialCpf = cpf.slice(0, -2);
         const penultimateDigit = createDigit(partialCpf);
@@ -98,7 +106,6 @@ class Validator {
         const confirmationCpf = partialCpf + penultimateDigit + lastDigit;
 
         if (cpf !== confirmationCpf) {
-            const errorMessage = 'CPF inválido.';
             this.printMessage(input, errorMessage);
             return false;
         }

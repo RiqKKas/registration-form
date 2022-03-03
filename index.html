@@ -11,50 +11,58 @@
 
 <body>
 
-    <section class="container">
-        <h1>Formulário de Cadastro</h1>
-
+    <main class="container">
         <form action="#" id="register-form">
-            <div class="half-box">
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required data-length="3-12" data-only-letters>
-            </div>
+            <fieldset>
+                <legend>Formulário de Cadastro</legend>
+                <div class="half-box gap">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required
+                        data-length="3-12" data-only-letters>
+                </div>
 
-            <div class="half-box">
-                <label for="last-name">Sobrenome</label>
-                <input type="text" name="last-name" id="last-name" placeholder="Digite seu sobrenome" data-required data-length="3-12" data-only-letters>
-            </div>
+                <div class="half-box">
+                    <label for="last-name">Sobrenome</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Digite seu sobrenome" data-required
+                        data-length="3-12" data-only-letters>
+                </div>
 
-            <div class="half-box">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-required data-email-validate>
-            </div>
+                <div class="half-box gap">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-required
+                        data-email-validate>
+                </div>
 
-            <div class="half-box">
-                <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" data-cpf-validate data-required>
-            </div>
+                <div class="half-box">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" data-cpf-validate data-required>
+                </div>
 
-            <div class="half-box">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Digite sua senha" data-required data-password-validate>
-            </div>
+                <div class="half-box gap">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha" data-required
+                        data-password-validate>
+                </div>
 
-            <div class="half-box">
-                <label for="pass-confirmation">Confirmação de senha</label>
-                <input type="password" name="pass-confirmation" id="pass-confirmation" placeholder="Confirme sua senha" data-required data-equal="password">
-            </div>
+                <div class="half-box">
+                    <label for="pass-confirmation">Confirmação de senha</label>
+                    <input type="password" name="pass-confirmation" id="pass-confirmation"
+                        placeholder="Confirme sua senha" data-required data-equal="password">
+                </div>
 
-            <div class="full-box">
-                <input type="checkbox" name="agreement" id="agreement" data-checked>
-                <label for="agreement">Eu li e aceito os <a href="#">termos de uso</a></label>
-            </div>
+                <div class="full-box">
+                    <label for="agreement">
+                        <input type="checkbox" name="agreement" id="agreement" data-checked>
+                        Eu li e aceito os <a href="#">termos de uso</a>
+                    </label>
+                </div>
 
-            <div class="full-box">
-                <input type="submit" id="btn-submit" value="Registrar">
-            </div>
+                <div class="full-box box-button">
+                    <input type="submit" id="btn-submit" value="Registrar">
+                </div>
+            </fieldset>
         </form>
-    </section>
+    </main>
 
     <p class="error-validation template"></p>
 
